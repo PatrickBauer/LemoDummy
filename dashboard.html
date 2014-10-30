@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="Apache Tapestry Framework (version 5.3.6)" name="generator">
+    <title>LeMo | Dashboard</title><!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--><!-- Le styles -->
+    <link type="text/css" rel="stylesheet" href="./index_files/default.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/jquery-ui-1.8.15.custom.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/tapestry-console.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/t5-alerts.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/tree.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/bootstrap-responsive.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/jquery.jqplot.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/nv.d3.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/jquery-ui-1.8.16.bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/apps.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/form.css">
+    <link type="text/css" rel="stylesheet" href="./index_files/jquery.jqplot.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .icon {
+            width: 75px;
+            height: 75px;
+        }
+
+        .ticon {
+            float: left;
+            margin: .3em .5em;
+            width: 25px;
+            height: 25px;
+            box-shadow: 1px 1px 1px #aaa;
+        }
+
+        .ui-dialog {
+            text-align: left;
+        }
+
+        .ui-dialog input[type="text"], .ui-dialog textarea {
+            display: block;
+            width: 90%;
+        }
+    </style>
+    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --><!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="./index_files/core.js" type="text/javascript"></script>
+    <script src="./index_files/validation.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.jqplot.min.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.ui.mouse.min.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.ui.slider.min.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.ui.draggable.min.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.ui.sortable.min.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-alert.js" type="text/javascript"></script>
+    <script src="./index_files/excanvas.js" type="text/javascript"></script>
+    <script src="./index_files/apps.js" type="text/javascript"></script>
+    <script src="./index_files/spin.js" type="text/javascript"></script>
+    <style type="text/css"></style>
+    <script src="./index_files/d3.v2.js" type="text/javascript"></script>
+    <script src="./index_files/BoxPlot_Lib.js" type="text/javascript"></script>
+    <script src="./index_files/nv.d3.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.tipsy.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-scrollspy.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-tab.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-tooltip.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-popover.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-button.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-carousel.js" type="text/javascript"></script>
+    <script src="./index_files/bootstrap-typeahead.js" type="text/javascript"></script>
+    <script src="./index_files/csvExport.js" type="text/javascript"></script>
+    <script src="./index_files/jquery.ui.autocomplete.min.js" type="text/javascript"></script>
+    <script src="./index_files/autocomplete.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.barRenderer.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.highlighter.min.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.cursor.min.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.dateAxisRenderer.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.canvasAxisLabelRenderer.min.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.trendline.min.js" type="text/javascript"></script>
+    <script src="./index_files/jqplot.canvasTextRenderer.min.js" type="text/javascript"></script>
+    <script src="./index_files/T5jqPlot.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.13/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.13/slick.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container-fluid">
+<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+
+<div class="nav-collapse">
+<ul class="nav">
+    <!--<li><a class="" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/dashboard">Dashboard</a></li>-->
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
+            Meine Kurse
+            <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <div style="padding: 10px 10px 0px;"><input type="text" id="coursesearch" style=" width: 95%"></div>
+
+            <script type="text/javascript">
+                $.expr[":"].containsNoCase = function(el, i, m) {
+                    var search = m[3];
+                    if (!search) return false;
+                    return new RegExp(search, "i").test($(el).text());
+                };
+
+                $("#coursesearch").keyup(function() {
+                    var search = $(this).val();
+                    $(".dropdown-menu tr").show();
+                    if (search) $(".dropdown-menu tr").not(":containsNoCase(" + search + ")").hide();
+                }).click(function(e) {
+                    e.stopPropagation();
+                });
+            </script>
+
+            <div class="table-wrapper" style="margin-bottom: 0; max-height: 400px; overflow-y: scroll;">
+
+                <table class="table" style="margin-bottom: 0;" >
+                    <tbody>
+                    <tr class="t-first">
+                        <td class="courseName">
+                            <a id="show" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/1">Independent Coursework<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/2">Forschungsprojekt<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/3">Anwendungen der Diskreten Mathematik (SL)<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_2" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/4">Programmierkonzepte und Algorithmen (Ü)<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-last">
+                        <td class="courseName">
+                            <a id="show_3" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/5">Systems Development and Frameworks (SU)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-first">
+                        <td class="courseName">
+                            <a id="show" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/1">Augmented Reality (SL)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/2">Augmented Reality (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/3">Mobile Applications for Public Health (SL)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_2" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/4">Mobile Applications for Public Health (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-last">
+                        <td class="courseName">
+                            <a id="show_3" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/5">ITS IT Security (SL)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-first">
+                        <td class="courseName">
+                            <a id="show" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/1">ITS IT Security (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/2">Advanced Topics (SL)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/3">Advanced Topics (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_2" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/4">Programmierung 3 (SU)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-last">
+                        <td class="courseName">
+                            <a id="show_3" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/5">Datenbanken (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-first">
+                        <td class="courseName">
+                            <a id="show" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/1">Software Engineering (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/2">Grundlagen sozialer Netze (SU)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/3">Einführung in Multimedia (Ü)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr>
+                        <td class="courseName">
+                            <a id="show_2" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/4">Einführung in die Gesundheitsinformatik (SU)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    <tr class="t-last">
+                        <td class="courseName">
+                            <a id="show_3" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/5">Verteilte Systeme (SL)</a>
+                        </td>
+                        <td class="lastRequestDate">30.12.2012</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
+            Nutzungsanalyse
+            <b class="caret"></b></a>
+        <ul class="dropdown-menu bigcourse">
+            <li><img src="index_files/UsageAnalysis2_Icon.png" alt=""/><span>Aktivität Zeit</span><p>Zeigt, wie häufig jedes Lernobjekt in Ihrem Kurs genutzt wurde.</p></li>
+            <li><img src="index_files/UsageAnalysisLO_Icon.png" alt=""/><span>Aktivität Lernobjekt</span><p>Zeigt, wie häufig jedes Lernobjekt in Ihrem Kurs genutzt wurde.</p></li>
+            <li><img src="index_files/UsageAnalysisLO_TreeMap_Icon.png" alt=""/><span>Aktivität Lernobjekt (Treemap)</span><p>Zeigt das Verhältnis zwischen den Zugriffszahlen der einzelnen Lernobjekte.</p></li>
+            <li>Aktivitätsgraph</li>
+            <li>Aktivitätsgraph 2</li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
+            Navigationsanalyse
+            <b class="caret"></b></a>
+        <ul class="dropdown-menu bigcourse">
+            <li>Häufige Pfade BIDE</li>
+            <li>Häufige Pfade Viger</li>
+            <li>Circle graph</li>
+            <li>Aktivität Zeit kumulativ </li>
+            <li>Aktivität Zeit (Heatmap)</li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
+            Leistungsanalyse
+            <b class="caret"></b></a>
+        <ul class="dropdown-menu bigcourse">
+            <li>Leistung</li>
+            <li>Leistung Durchschnitt</li>
+            <li>Leistung kumulativ</li>
+            <li>Leistung Nutzer kumulativ</li>
+        </ul>
+    </li>
+</ul>
+<!-- Logout Button-->
+<ul class="nav pull-right">
+    <li class="divider-vertical pull-right"></li>
+    <li>
+        <a id="logout" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.layoutdashboard.logoutlink">Beenden </a>
+    </li>
+</ul>
+<!-- Locale Switch German - English-->
+<ul class="nav pull-right">
+    <li class="divider-vertical pull-right"></li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#"><img width="20" height="20" src="./index_files/glyphicons_019_cogwheel_white.png"><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li class="nav-header">Einstellungen</li>
+            <li><a href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/account/my">Mein Account</a>
+            </li>
+            <li class="nav-header">Sprache</li>
+            <li class="active">
+                <a href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.layoutdashboard.enlocalelink">English</a>
+            </li>
+            <li class="inactive">
+                <a href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.layoutdashboard.delocalelink">Deutsch</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul class="nav pull-right"><!-- Searchfield-->
+    <form class="navbar-search" onsubmit="javascript:return Tapestry.waitForPage(event);" action="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.layoutdashboard.searchform" method="post" id="searchForm" _lpchecked="1">
+        <div class="" style="display: none;">
+            <input value="14Af+wmCTA6FaBlgT9j3LAR+2OE=:H4sIAAAAAAAAAJ3QvUrEQBAH8LkDQThsDmysz0rciHiNVocfIAQ9CD7AZLPmVje76+zEyzW2WvsAPoH4ElfY+Q4+gK2ViDGxE0Sthhn4z/yY+xdYmK7DWoaM0X7ljSNF2wZnruQMwyR1SJkICklOpCspqBAI9hzlAj3KiRKMXgWm2VDIOmt0WtfCO6ssBxFre56UaaF5MCYn63DThaCdPdY3t+8r17YLnRgWpdF14jBj6MdneImRQZtHCZO2+U7lGZZaxG6LmG7Cxm/MoVnwJScY/ghPMSgxSushSj7QymSDRHHpV0/mveflx7dG2pPOMjlzhIW6gCvofOL67bWW2xL/KRz9Vfjtr/OHbOv09e6pC1D5D6SE+xLgAQAA" name="t:formdata" type="hidden">
+        </div>
+        <div class="input-prepend">
+            <a id="searchCourses" style="margin-top:0px" class="btn btn-inverse" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#"><i class="icon-search icon-white"></i></a><input placeholder="Suchen" class="search-query" id="searchStringCourse" name="searchStringCourse" type="text"><img id="searchStringCourse_icon" class="t-error-icon" alt="" src="./index_files/spacer.gif" style="display: none;">
+        </div>
+    </form>
+</ul>
+<script>
+    $("input").keypress(function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            if ($(':focus')[0] !== undefined) {
+                if ($(':focus')[0].id !== undefined) {
+                    if ($(':focus')[0].id == "searchStringCourse") {
+                        $("#searchCourses").click();
+                        console.log("submitted");
+                    }
+                }
+            }
+        }
+    });
+</script>
+<a class="btn btn-inverse pull-right" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/help"><i class="icon-question-sign icon-white"></i> Hilfe</a>
+</div>
+<!--/.nav-collapse --></div>
+</div>
+</div>
+<div class="container-fluid"><!--Homepage content--><!-- Breadcrumb component-->
+<div class="row-fluid">
+    <div class="span12">
+        <ul class="breadcrumb">
+            <li><a href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/dashboard">Dashboard</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row-fluid">
+
+    <div class="span12" style="margin-left: 0">
+        <div class="thumbnail">
+            <div class="row-fluid dashboard">
+                <div class="span4">
+                    <div>
+                        <h2>Nutzungsanalyse</h2>
+
+                        <div class="slick">
+                            <div>
+                                <img src="images/slick.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                                </p>
+                            </div>
+                            <div>
+                                <img src="images/slick.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                                </p>
+                            </div>
+                            <div>
+                                <img src="images/slick.png">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div>1</div>
+                </div>
+
+
+                <div class="span4">
+                    <div>1</div>
+                </div>
+
+                <script>
+                    jQuery('.slick').slick();
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <footer><br><br>
+
+        <p>© <a target="_blank" href="http://www.lemo-projekt.de/">LeMo Project 2013</a></p></footer>
+</div>
+<!-- /container -->
+<script type="text/javascript">var $ = jQuery;
+Tapestry.onDOMLoaded(function () {
+    Tapestry.init({
+        "linkSubmit": [{
+            "form": "searchForm",
+            "clientId": "searchCourses",
+            "mode": "normal"
+        }, {"form": "quickSearchForm", "clientId": "quickSearch", "mode": "normal"}],
+        "formEventManager": [{
+            "formId": "searchForm",
+            "validate": {"submit": true, "blur": true}
+        }, {"formId": "quickSearchForm", "validate": {"submit": true, "blur": true}}]
+    });
+    $('#coursezone').bind(Tapestry.ZONE_UPDATED_EVENT, function () {
+        $('.tabs a:first').tab('show');
+    });
+    Tapestry.init({
+        "activate": ["searchStringCourse"],
+        "jqPlotChart": [{
+            "id": "chart1",
+            "data": [[[1354393331000, 37], [1354479731000, 47], [1354566131000, 32], [1354652531000, 42], [1354738931000, 36], [1354825331000, 39], [1354911731000, 24], [1354998131000, 43], [1355084531000, 33], [1355170931000, 29], [1355257331000, 37], [1355343731000, 31], [1355430131000, 34], [1355516531000, 45], [1355602931000, 33], [1355689331000, 33], [1355775731000, 31], [1355862131000, 43], [1355948531000, 33], [1356034931000, 27], [1356121331000, 35], [1356207731000, 30], [1356294131000, 43], [1356380531000, 34], [1356466931000, 35], [1356553331000, 34], [1356639731000, 36], [1356726131000, 32], [1356812531000, 29], [1356898931000, 32]]],
+            "options": {
+                "seriesDefaults": {"renderer": jQuery.jqplot.LineRenderer},
+                "cursor": {"showTooltip": true, "zoom": true, "show": true, "constrainZoomTo": "x"},
+                "legend": {"location": "e", "show": false},
+                "grid": {
+                    "borderColor": "#222",
+                    "shadow": false,
+                    "gridLineColor": "#222",
+                    "background": "#FFF",
+                    "drawBorder": false,
+                    "drawGridlines": false
+                },
+                "highlighter": {
+                    "tooltipLocation": "ne",
+                    "showLabel": true,
+                    "sizeAdjust": 10.5,
+                    "tooltipAxes": "y",
+                    "show": true
+                },
+                "axes": {
+                    "yaxis": {
+                        padMin: 0,
+                        label: 'Aktivitäten',
+                        labelRenderer: jQuery.jqplot.CanvasAxisLabelRenderer,
+                        labelOptions: {fontFamily: 'Arial', fontSize: '9pt'}
+                    }, "xaxis": {padMin: 0, renderer: jQuery.jqplot.DateAxisRenderer}
+                }
+            }
+        }],
+        "autocomplete": [{
+            "id": "courseSearch",
+            "paramName": "t:input",
+            "url": "http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.coursesearch:autocomplete"
+        }],
+        "linkZone": [{
+            "linkId": "sort",
+            "url": "/lemo-public/data/explorer.grid.columns:sort/courseName/grid",
+            "zoneId": "grid"
+        }, {
+            "linkId": "sort2",
+            "url": "/lemo-public/data/explorer.grid.columns:sort/courseName/grid",
+            "zoneId": "grid"
+        }, {
+            "linkId": "sort_0",
+            "url": "/lemo-public/data/explorer.grid.columns:sort/lastRequestDate/grid",
+            "zoneId": "grid"
+        }, {
+            "linkId": "sort2_0",
+            "url": "/lemo-public/data/explorer.grid.columns:sort/lastRequestDate/grid",
+            "zoneId": "grid"
+        }, {"linkId": "show", "url": "/lemo-public/data/explorer.show/1", "zoneId": "coursezone"}, {
+            "linkId": "show_0",
+            "url": "/lemo-public/data/explorer.show/2",
+            "zoneId": "coursezone"
+        }, {
+            "linkId": "show_1",
+            "url": "/lemo-public/data/explorer.show/3",
+            "zoneId": "coursezone"
+        }, {
+            "linkId": "show_2",
+            "url": "/lemo-public/data/explorer.show/4",
+            "zoneId": "coursezone"
+        }, {"linkId": "show_3", "url": "/lemo-public/data/explorer.show/5", "zoneId": "coursezone"}],
+        "zone": [{"update": "show", "element": "grid"}, {
+            "update": "show",
+            "element": "coursezone",
+            "show": "show"
+        }, {"update": "show", "element": "courseVisZone", "show": "show"}, {
+            "update": "show",
+            "element": "courseLastMonthZone",
+            "show": "show"
+        }, {"update": "show", "element": "courseVisLastMonthZone", "show": "show"}, {
+            "update": "show",
+            "element": "courseOverallZone",
+            "show": "show"
+        }, {"update": "show", "element": "courseVisOverallZone", "show": "show"}, {
+            "update": "show",
+            "element": "analysisSelectZone",
+            "show": "show"
+        }]
+    });
+});
+</script>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul>
+<script id="hiddenlpsubmitdiv" style="display: none;"></script>
+<script>try {
+    for (var lastpass_iter = 0; lastpass_iter < document.forms.length; lastpass_iter++) {
+        var lastpass_f = document.forms[lastpass_iter];
+        if (typeof(lastpass_f.lpsubmitorig2) == "undefined") {
+            lastpass_f.lpsubmitorig2 = lastpass_f.submit;
+            lastpass_f.submit = function () {
+                var form = this;
+                var customEvent = document.createEvent("Event");
+                customEvent.initEvent("lpCustomEvent", true, true);
+                var d = document.getElementById("hiddenlpsubmitdiv");
+                if (d) {
+                    for (var i = 0; i < document.forms.length; i++) {
+                        if (document.forms[i] == form) {
+                            d.innerText = i;
+                        }
+                    }
+                    d.dispatchEvent(customEvent);
+                }
+                form.lpsubmitorig2();
+            }
+        }
+    }
+} catch (e) {
+}</script>
+</body>
+</html>

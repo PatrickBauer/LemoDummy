@@ -31,3 +31,12 @@
 .bigcourse li:last-child {
   border-bottom: 0;
 }
+
+.dashboard > div > div  {
+  width: 400px;
+  margin: auto;
+}
+
+.dashboard h2 {
+  margin-bottom: 30px;
+}
