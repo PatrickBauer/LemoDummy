@@ -5,6 +5,7 @@
 .bigcourse li {
   padding: 10px;
   border-bottom: 1px solid black;
+    overflow: hidden;
 }
 
 
@@ -14,6 +15,8 @@
 
 .bigcourse li p {
   margin-bottom: 0;
+  color: #666;
+
 }
 
 .bigcourse li img {
@@ -30,4 +33,21 @@
 
 .bigcourse li:last-child {
   border-bottom: 0;
+}
+
+/*Dark*/
+.bigcourse.dark {
+    background-color: #333333;
+}
+
+.bigcourse.dark li span {
+    color: #DDDDDD;
+}
+
+.bigcourse.dark li:hover {
+    background: #444;
+}
+
+.bigcourse.dark li p {
+    color: rgb(153, 153, 153);
 }
