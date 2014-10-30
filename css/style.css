@@ -35,6 +35,25 @@
   border-bottom: 0;
 }
 
+
+/*Dark*/
+.bigcourse.dark {
+  background-color: #333333;
+}
+
+.bigcourse.dark li span {
+  color: #DDDDDD;
+}
+
+.bigcourse.dark li:hover {
+  background: #444;
+}
+
+.bigcourse.dark li p {
+  color: rgb(153, 153, 153);
+}
+
+
 .dashboard > div > div  {
   width: 400px;
   margin: auto;
@@ -42,21 +61,20 @@
 
 .dashboard h2 {
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-/*Dark*/
-.bigcourse.dark {
-    background-color: #333333;
+.dashboard div.color, .dashboard img {
+  width: 400px;
+  height: 217px;
+  border-radius: 30px;
 }
 
-.bigcourse.dark li span {
-    color: #DDDDDD;
+.dashboard p {
+  margin-top: 10px;
 }
 
-.bigcourse.dark li:hover {
-    background: #444;
+.slick-prev:before, .slick-next:before {
+  color: #333 !important;
 }
 
-.bigcourse.dark li p {
-    color: rgb(153, 153, 153);
-}
