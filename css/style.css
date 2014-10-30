@@ -1,0 +1,33 @@
+.bigcourse {
+  min-width: 400px;
+}
+
+.bigcourse li {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+
+.bigcourse li:hover {
+  background: #eee;
+}
+
+.bigcourse li p {
+  margin-bottom: 0;
+}
+
+.bigcourse li img {
+  width: 80px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.bigcourse li span {
+  font-weight: bold;
+  color: #000000;
+}
+
+.bigcourse li:last-child {
+  border-bottom: 0;
+}

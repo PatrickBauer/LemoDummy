@@ -20,6 +20,7 @@
     <link type="text/css" rel="stylesheet" href="./index_files/apps.css">
     <link type="text/css" rel="stylesheet" href="./index_files/form.css">
     <link type="text/css" rel="stylesheet" href="./index_files/jquery.jqplot.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -99,8 +100,7 @@
 
 <div class="nav-collapse">
 <ul class="nav">
-    <li><a class="" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/dashboard">Dashboard</a>
-    </li>
+    <!--<li><a class="" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/dashboard">Dashboard</a></li>-->
     <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
             Meine Kurse
@@ -130,25 +130,25 @@
                     <tbody>
                     <tr class="t-first">
                         <td class="courseName">
-                            <a id="show" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/1">Independent Coursework</a>
+                            <a id="show" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/1">Independent Coursework<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
                         </td>
                         <td class="lastRequestDate">30.12.2012</td>
                     </tr>
                     <tr>
                         <td class="courseName">
-                            <a id="show_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/2">Forschungsprojekt</a>
+                            <a id="show_0" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/2">Forschungsprojekt<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
                         </td>
                         <td class="lastRequestDate">30.12.2012</td>
                     </tr>
                     <tr>
                         <td class="courseName">
-                            <a id="show_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/3">Anwendungen der Diskreten Mathematik (SL)</a>
+                            <a id="show_1" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/3">Anwendungen der Diskreten Mathematik (SL)<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
                         </td>
                         <td class="lastRequestDate">30.12.2012</td>
                     </tr>
                     <tr>
                         <td class="courseName">
-                            <a id="show_2" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/4">Programmierkonzepte und Algorithmen (Ü)</a>
+                            <a id="show_2" onclick="javascript:return Tapestry.waitForPage(event);" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer.show/4">Programmierkonzepte und Algorithmen (Ü)<img style="margin-left: 7px; margin-top: -3px" src="images/bookmark.png" alt=""/></a>
                         </td>
                         <td class="lastRequestDate">30.12.2012</td>
                     </tr>
@@ -255,12 +255,37 @@
     </li>
     <li class="dropdown">
         <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
-            Meine Favoriten
+            Nutzungsanalyse
             <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <div style="padding: 10px; white-space: nowrap">
-                Keine Favoriten angelegt
-            </div>
+        <ul class="dropdown-menu bigcourse">
+            <li><img src="index_files/UsageAnalysis2_Icon.png" alt=""/><span>Aktivität Zeit</span><p>Zeigt, wie häufig jedes Lernobjekt in Ihrem Kurs genutzt wurde.</p></li>
+            <li><img src="index_files/UsageAnalysisLO_Icon.png" alt=""/><span>Aktivität Lernobjekt</span><p>Zeigt, wie häufig jedes Lernobjekt in Ihrem Kurs genutzt wurde.</p></li>
+            <li><img src="index_files/UsageAnalysisLO_TreeMap_Icon.png" alt=""/><span>Aktivität Lernobjekt (Treemap)</span><p>Zeigt das Verhältnis zwischen den Zugriffszahlen der einzelnen Lernobjekte.</p></li>
+            <li>Aktivitätsgraph</li>
+            <li>Aktivitätsgraph 2</li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
+            Navigationsanalyse
+            <b class="caret"></b></a>
+        <ul class="dropdown-menu bigcourse">
+            <li>Häufige Pfade BIDE</li>
+            <li>Häufige Pfade Viger</li>
+            <li>Circle graph</li>
+            <li>Aktivität Zeit kumulativ </li>
+            <li>Aktivität Zeit (Heatmap)</li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" id="myfavorites" href="http://lemo3.f4.htw-berlin.de:8080/lemo-public/data/explorer#">
+            Leistungsanalyse
+            <b class="caret"></b></a>
+        <ul class="dropdown-menu bigcourse">
+            <li>Leistung</li>
+            <li>Leistung Durchschnitt</li>
+            <li>Leistung kumulativ</li>
+            <li>Leistung Nutzer kumulativ</li>
         </ul>
     </li>
 </ul>
