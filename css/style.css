@@ -55,18 +55,18 @@
 
 
 .dashboard > div > div  {
-  width: 400px;
+  width: 300px;
   margin: auto;
 }
 
 .dashboard h2 {
   margin-bottom: 30px;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 
 .dashboard div.color, .dashboard img {
-  width: 400px;
-  height: 217px;
+  width: 300px;
+  height: 186px;
   border-radius: 30px;
 }
 
@@ -80,4 +80,59 @@
 
 .navbar .dropdown-menu.dark:after {
   border-bottom-color: #333333;
+}
+
+.subtabs {
+  width: 100%;
+}
+
+.subtabs ul {
+  overflow: hidden;
+  margin: 0px 0 15px;
+  padding: 5px 10px;
+  list-style: none;
+  /*background: #fefefe;*/
+}
+
+.subtabs li {
+  float: left;
+  margin-right: 10px;
+  padding: 3px 8px;
+  background: #eee;
+  border-radius: 5px;
+ }
+
+.subtabs li.active, .subtabs li:hover {
+  background: #ccc;
+}
+
+.slick2 {
+  width: 100%;
+}
+
+.tabs-page .tab-content {
+  display: block;
+}
+
+.tabs-page .nav.nav-tabs {
+  margin-bottom: 10px;
+}
+
+.slick2  > .slick-prev, .slick2  > .slick-next {
+  top: -20px;
+  height: 36px;
+  width: 36px;
+}
+
+.slick2  > .slick-next {
+  right: -23px;
+}
+
+.slick2  > .slick-prev::before, .slick2  > .slick-next::before {
+  font-size: 36px;
+}
+
+img.responsive {
+  max-width: 100%;
+  height: auto;
 }
