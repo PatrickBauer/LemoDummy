@@ -100,6 +100,8 @@
   padding: 3px 8px;
   background: #eee;
   border-radius: 5px;
+
+  cursor: pointer;
  }
 
 .subtabs li.active, .subtabs li:hover {
